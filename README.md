@@ -1,0 +1,2 @@
+# pauseset
+AdlibEnable("pause"); this keeps running at all times till you exit.  HotKeySet("{pause}","pauseset"); uses the pause key to change the value of $Pause $Pause = -1  sleep(500) While 1  send("4"); this sends the number 4 key to the active program.  sleep(500) ; sleep for .5 second before repeating  send("5"); this sends the number 5 key to the active program.  sleep(500) Wend; this keeps looping  Func pauseset()    $Pause = $Pause * -1 EndFunc  Func pause()    While $Pause = -1         Sleep(500)    Wend EndFunc
